@@ -15,7 +15,7 @@ import { CosmeticsAppBottomTabsParamType } from '../../../../navigation/Cosmetic
 import { COLORS } from '../../../../constants/CosmeticsAppUI/theme';
 Icon.loadFont();
 
-type CosmeticsAppHomeProps = NativeStackScreenProps<
+type CosmeticsAppHomeProps = NativeStackScreenProps< 
   CosmeticsAppBottomTabsParamType,
   'CosmeticsAppHome'
 >;
@@ -31,7 +31,7 @@ const CosmeticsAppHome: FunctionComponent<CosmeticsAppHomeProps> = ({
       <View style={styles.header}>
         <View style={styles.row}>
           <Text style={styles.titleBold}>Cosmetics that</Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.goBack()}>
             <Icon name="search" size={30} color={COLORS.primary} />
           </TouchableOpacity>
         </View>

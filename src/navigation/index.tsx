@@ -4,6 +4,7 @@ import {
   NavigationContainer,
   CompositeNavigationProp,
   RouteProp,
+  DefaultTheme,
 } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -13,6 +14,14 @@ import SampleAppList from './SampleAppList';
 export type HomeParamType = {
   HomeScreen: undefined;
   SampleAppList: undefined;
+};
+
+const theme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    border: 'transparent',
+  },
 };
 
 // export type RootParamType = {};
@@ -34,7 +43,7 @@ const Stack = createNativeStackNavigator<HomeParamType>();
 
 function App() {
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={theme}>
       <Stack.Navigator
         initialRouteName="HomeScreen"
         screenOptions={{

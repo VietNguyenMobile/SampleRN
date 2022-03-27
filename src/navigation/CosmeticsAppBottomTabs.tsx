@@ -43,7 +43,11 @@ export type CosmeticsAppBottomTabsParamType = {
 //   );
 // };
 
-const MyTabBar = ({ state, descriptors, navigation }) => {
+const MyTabBar = (
+  {
+    // state, descriptors, navigation
+  },
+) => {
   return (
     <View
       style={{
@@ -109,7 +113,11 @@ const CosmeticsAppTabNavigator: FunctionComponent = () => {
   return (
     <CosmeticsAppBottomTabs.Navigator
       screenOptions={{ headerShown: false }}
-      tabBar={props => <MyTabBar {...props} />}>
+      tabBar={props => (
+        <MyTabBar
+        //  {...props}
+        />
+      )}>
       <CosmeticsAppBottomTabs.Screen
         name="CosmeticsAppHome"
         component={CosmeticsAppHome}
