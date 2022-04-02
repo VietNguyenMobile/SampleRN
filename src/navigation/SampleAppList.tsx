@@ -56,13 +56,7 @@ const SampleAppNavigator = () => {
             ...FONTS.navTitle,
           },
           headerLeft: () => (
-            <TouchableOpacity
-              onPress={() => navigation.goBack()}
-              style={
-                {
-                  // marginLeft: SIZES.padding
-                }
-              }>
+            <TouchableOpacity onPress={() => navigation.goBack()}>
               <Image
                 source={icons.menu}
                 resizeMode="contain"

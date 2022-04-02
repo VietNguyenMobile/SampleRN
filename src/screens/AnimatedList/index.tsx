@@ -9,36 +9,31 @@ import {
 } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-import { HomeParamType } from '../../navigation';
+export type AnimatedListParamType = {
+  TodoAnimated: undefined;
+};
 
-type HomeScreenProps = NativeStackScreenProps<HomeParamType, 'HomeScreen'>;
+type AnimatedListScreenProps = NativeStackScreenProps<
+  AnimatedListParamType,
+  'AnimatedList'
+>;
 
-const HomeScreen: FunctionComponent<HomeScreenProps> = ({
+const AnimatedListScreen: FunctionComponent<AnimatedListScreenProps> = ({
   navigation,
   route,
 }) => {
-  const navigateToSampleApplication = useCallback(() => {
-    navigation.navigate('SampleAppList');
-  }, []);
-
-  const navigateToAnimatedList = useCallback(() => {
-    navigation.navigate('AnimatedList');
+  const navigateToTodoAnimated = useCallback(() => {
+    navigation.navigate('TodoAnimated');
   }, []);
 
   return (
     <ScrollView style={styles.container}>
       <View style={{ marginBottom: 100 }}>
-        <Text style={{ textAlign: 'center' }}>Navigation Screen</Text>
+        <Text style={{ textAlign: 'center' }}>Animated List</Text>
         <Pressable
           style={styles.btnNavigation}
-          onPress={navigateToSampleApplication}>
-          <Text style={styles.title}>Sample Application</Text>
-        </Pressable>
-
-        <Pressable
-          style={styles.btnNavigation}
-          onPress={navigateToAnimatedList}>
-          <Text style={styles.title}>Animated List</Text>
+          onPress={navigateToTodoAnimated}>
+          <Text style={styles.title}>Todo Animated</Text>
         </Pressable>
       </View>
     </ScrollView>
@@ -75,4 +70,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default AnimatedListScreen;
