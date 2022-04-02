@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { View } from 'react-native';
+// import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import CosmeticsAppHome from '../screens/SampleApp/CosmeticsAppUI/Home';

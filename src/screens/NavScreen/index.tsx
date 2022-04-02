@@ -33,6 +33,10 @@ const SampleAppList: FunctionComponent<SampleAppListScreenProps> = ({
     navigation.navigate('CosmeticsApp');
   }, []);
 
+  const navigateToFoodDelivery = useCallback(() => {
+    navigation.navigate('FoodDeliveryApp');
+  }, []);
+
   return (
     <ScrollView style={styles.container}>
       <View style={{ marginBottom: 100 }}>
@@ -46,6 +50,12 @@ const SampleAppList: FunctionComponent<SampleAppListScreenProps> = ({
           style={styles.btnNavigation}
           onPress={navigateToHomeCosmetics}>
           <Text style={styles.title}>Cosmetics App UI</Text>
+        </Pressable>
+
+        <Pressable
+          style={styles.btnNavigation}
+          onPress={navigateToFoodDelivery}>
+          <Text style={styles.title}>Food Delivery</Text>
         </Pressable>
       </View>
     </ScrollView>

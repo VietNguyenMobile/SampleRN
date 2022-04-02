@@ -10,6 +10,7 @@ import {
 import NikeStoreApp from '../screens/SampleApp/NikeStoreApp';
 import NavScreen from '../screens/NavScreen';
 import CosmeticsApp from './CosmeticsAppBottomTabs';
+import FoodDeliveryApp from './FoodDelivery';
 
 import {
   COLORS,
@@ -22,6 +23,7 @@ export type SampleAppParamType = {
   NikeStoreApp: undefined;
   NavScreen: undefined;
   CosmeticsApp: undefined;
+  FoodDeliveryApp: undefined;
 };
 
 const StackSampleAppList = createNativeStackNavigator<SampleAppParamType>();
@@ -88,6 +90,11 @@ const SampleAppNavigator = () => {
       <StackSampleAppList.Screen
         name="CosmeticsApp"
         component={CosmeticsApp}
+        options={{ headerShown: false }}
+      />
+      <StackSampleAppList.Screen
+        name="FoodDeliveryApp"
+        component={FoodDeliveryApp}
         options={{ headerShown: false }}
       />
     </StackSampleAppList.Navigator>
