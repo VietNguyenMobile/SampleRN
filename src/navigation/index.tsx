@@ -10,11 +10,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../screens/Home';
 import SampleAppList from './SampleAppList';
 import AnimatedList from './AnimatedList';
+import SampleLibraryList from './SampleLibraryList';
 
 export type HomeParamType = {
   HomeScreen: undefined;
   SampleAppList: undefined;
   AnimatedList: undefined;
+  SampleLibraryList: undefined;
 };
 
 const theme = {
@@ -53,6 +55,7 @@ function App() {
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="SampleAppList" component={SampleAppList} />
         <Stack.Screen name="AnimatedList" component={AnimatedList} />
+        <Stack.Screen name="SampleLibraryList" component={SampleLibraryList} />
       </Stack.Navigator>
     </NavigationContainer>
   );

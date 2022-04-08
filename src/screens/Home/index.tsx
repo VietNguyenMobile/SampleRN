@@ -25,6 +25,10 @@ const HomeScreen: FunctionComponent<HomeScreenProps> = ({
     navigation.navigate('AnimatedList');
   }, []);
 
+  const navigateToSampleLibraryList = useCallback(() => {
+    navigation.navigate('SampleLibraryList');
+  }, []);
+
   return (
     <ScrollView style={styles.container}>
       <View style={{ marginBottom: 100 }}>
@@ -39,6 +43,12 @@ const HomeScreen: FunctionComponent<HomeScreenProps> = ({
           style={styles.btnNavigation}
           onPress={navigateToAnimatedList}>
           <Text style={styles.title}>Animated List</Text>
+        </Pressable>
+
+        <Pressable
+          style={styles.btnNavigation}
+          onPress={navigateToSampleLibraryList}>
+          <Text style={styles.title}>Sample Library List</Text>
         </Pressable>
       </View>
     </ScrollView>

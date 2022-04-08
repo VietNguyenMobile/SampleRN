@@ -9,12 +9,14 @@ import {
 } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-export type AnimatedListParamType = {
-  TodoAnimated: undefined;
-};
+// export type AnimatedListParamType = {
+//   TodoAnimated: undefined;
+// };
+
+import { AnimatedParamType } from '../../navigation/AnimatedList';
 
 type AnimatedListScreenProps = NativeStackScreenProps<
-  AnimatedListParamType,
+  AnimatedParamType,
   'AnimatedList'
 >;
 
@@ -26,6 +28,10 @@ const AnimatedListScreen: FunctionComponent<AnimatedListScreenProps> = ({
     navigation.navigate('TodoAnimated');
   }, []);
 
+  const navigateToDoubleTapToHeartAnimation = useCallback(() => {
+    navigation.navigate('DoubleTapToHeartAnimation');
+  });
+
   return (
     <ScrollView style={styles.container}>
       <View style={{ marginBottom: 100 }}>
@@ -34,6 +40,12 @@ const AnimatedListScreen: FunctionComponent<AnimatedListScreenProps> = ({
           style={styles.btnNavigation}
           onPress={navigateToTodoAnimated}>
           <Text style={styles.title}>Todo Animated</Text>
+        </Pressable>
+
+        <Pressable
+          style={styles.btnNavigation}
+          onPress={navigateToDoubleTapToHeartAnimation}>
+          <Text style={styles.title}>Double Tap To Heart Animation</Text>
         </Pressable>
       </View>
     </ScrollView>
