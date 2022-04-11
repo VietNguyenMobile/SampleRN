@@ -32,6 +32,10 @@ const AnimatedListScreen: FunctionComponent<AnimatedListScreenProps> = ({
     navigation.navigate('DoubleTapToHeartAnimation');
   });
 
+  const navigateToFoodAppUIScroll = useCallback(() => {
+    navigation.navigate('FoodAppUIScroll');
+  });
+
   return (
     <ScrollView style={styles.container}>
       <View style={{ marginBottom: 100 }}>
@@ -46,6 +50,12 @@ const AnimatedListScreen: FunctionComponent<AnimatedListScreenProps> = ({
           style={styles.btnNavigation}
           onPress={navigateToDoubleTapToHeartAnimation}>
           <Text style={styles.title}>Double Tap To Heart Animation</Text>
+        </Pressable>
+
+        <Pressable
+          style={styles.btnNavigation}
+          onPress={navigateToFoodAppUIScroll}>
+          <Text style={styles.title}>Food App UI Scroll</Text>
         </Pressable>
       </View>
     </ScrollView>

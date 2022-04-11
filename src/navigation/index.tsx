@@ -11,12 +11,14 @@ import HomeScreen from '../screens/Home';
 import SampleAppList from './SampleAppList';
 import AnimatedList from './AnimatedList';
 import SampleLibraryList from './SampleLibraryList';
+import UIScreenList from './UIScreenList';
 
 export type HomeParamType = {
   HomeScreen: undefined;
   SampleAppList: undefined;
   AnimatedList: undefined;
   SampleLibraryList: undefined;
+  UIScreenList: undefined;
 };
 
 const theme = {
@@ -56,6 +58,7 @@ function App() {
         <Stack.Screen name="SampleAppList" component={SampleAppList} />
         <Stack.Screen name="AnimatedList" component={AnimatedList} />
         <Stack.Screen name="SampleLibraryList" component={SampleLibraryList} />
+        <Stack.Screen name="UIScreenList" component={UIScreenList} />
       </Stack.Navigator>
     </NavigationContainer>
   );

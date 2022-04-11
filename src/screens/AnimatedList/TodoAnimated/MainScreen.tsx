@@ -42,7 +42,10 @@ const initialData = [
   },
 ];
 
-type MainScreenProps = NativeStackScreenProps<DrawerParamType, 'Main'>;
+type MainScreenProps = NativeStackScreenProps<
+  DrawerParamType,
+  'TodoAnimated_Main'
+>;
 
 const MainScreen: FunctionComponent<MainScreenProps> = ({
   navigation,

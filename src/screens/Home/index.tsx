@@ -29,6 +29,10 @@ const HomeScreen: FunctionComponent<HomeScreenProps> = ({
     navigation.navigate('SampleLibraryList');
   }, []);
 
+  const navigateToUIScreenList = useCallback(() => {
+    navigation.navigate('UIScreenList');
+  }, []);
+
   return (
     <ScrollView style={styles.container}>
       <View style={{ marginBottom: 100 }}>
@@ -49,6 +53,12 @@ const HomeScreen: FunctionComponent<HomeScreenProps> = ({
           style={styles.btnNavigation}
           onPress={navigateToSampleLibraryList}>
           <Text style={styles.title}>Sample Library List</Text>
+        </Pressable>
+
+        <Pressable
+          style={styles.btnNavigation}
+          onPress={navigateToUIScreenList}>
+          <Text style={styles.title}>UI Screen List</Text>
         </Pressable>
       </View>
     </ScrollView>
