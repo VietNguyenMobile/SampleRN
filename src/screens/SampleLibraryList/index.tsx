@@ -19,17 +19,10 @@ type SampleLibraryListScreenProps = NativeStackScreenProps<
 const SampleLibraryListScreen: FunctionComponent<
   SampleLibraryListScreenProps
 > = ({ navigation, route }) => {
-  const navigateToRNShare = useCallback(() => {
-    navigation.navigate('RNShare');
-  });
-
   return (
     <ScrollView style={styles.container}>
       <View style={{ marginBottom: 100 }}>
         <Text style={{ textAlign: 'center' }}>Sample Library List</Text>
-        <Pressable style={styles.btnNavigation} onPress={navigateToRNShare}>
-          <Text style={styles.title}>React Native Share</Text>
-        </Pressable>
       </View>
     </ScrollView>
   );

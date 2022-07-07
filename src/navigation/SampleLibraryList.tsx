@@ -6,8 +6,6 @@ import {
   NativeStackHeaderProps,
   NativeStackNavigationProp,
 } from '@react-navigation/native-stack';
-
-import RNShare from '../screens/SampleLibraryList/RNShare';
 import SampleLibrary from '../screens/SampleLibraryList';
 
 import {
@@ -38,7 +36,6 @@ const SampleLibraryNavigator = () => {
         name="SampleLibrary"
         component={SampleLibrary}
       />
-      <StackSampleLibraryList.Screen name="RNShare" component={RNShare} />
     </StackSampleLibraryList.Navigator>
   );
 };

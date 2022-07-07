@@ -11,9 +11,7 @@ const UIScreenList: FunctionComponent<UIScreenListProps> = ({
   navigation,
   route,
 }) => {
-  const navigateToBlurLoginScreen = useCallback(() => {
-    navigation.navigate('BlurLoginScreen');
-  }, []);
+
 
   const navigateToFlatListPagination = useCallback(() => {
     navigation.navigate('FlatListPagination');
@@ -23,12 +21,6 @@ const UIScreenList: FunctionComponent<UIScreenListProps> = ({
     <ScrollView style={styles.container}>
       <View style={{ marginBottom: 100 }}>
         <Text style={{ textAlign: 'center' }}>UI Screen List</Text>
-        <Pressable
-          style={styles.btnNavigation}
-          onPress={navigateToBlurLoginScreen}>
-          <Text style={styles.title}>Blur Login Screen</Text>
-        </Pressable>
-
         <Pressable
           style={styles.btnNavigation}
           onPress={navigateToFlatListPagination}>

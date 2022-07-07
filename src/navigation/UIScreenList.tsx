@@ -1,8 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Image } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-import BlurLoginScreen from '../screens/UIScreenList/BlurLoginScreen';
 import UIScreen from '../screens/UIScreenList';
 import FlatListPagination from 'screens/UIScreenList/FlatListPagination';
 
@@ -21,12 +19,6 @@ const UIScreenNavigator = () => {
         headerShown: false,
       }}>
       <StackUIScreenList.Screen name="UIScreen" component={UIScreen} />
-      <StackUIScreenList.Screen
-        name="BlurLoginScreen"
-        component={BlurLoginScreen}
-        options={{ headerShown: false }}
-      />
-
       <StackUIScreenList.Screen
         name="FlatListPagination"
         component={FlatListPagination}
