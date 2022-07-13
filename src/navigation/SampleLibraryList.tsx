@@ -7,7 +7,8 @@ import {
   NativeStackNavigationProp,
 } from '@react-navigation/native-stack';
 import SampleLibrary from '../screens/SampleLibraryList';
-
+import ManageStateMobxScreen from 'screens/SampleLibraryList/ManageStateMobx/manage-state-mobx-screen';
+import ManageStateMobxLiteScreen from 'screens/SampleLibraryList/ManageStateMobx/manage-state-mobx-lite-screen';
 import {
   COLORS,
   FONTS,
@@ -17,7 +18,8 @@ import {
 
 export type SampleLibraryListParamType = {
   SampleLibrary: undefined;
-  RNShare: undefined;
+  ManageStateMobx: undefined;
+  ManageStateMobxLite: undefined;
 };
 
 const StackSampleLibraryList =
@@ -35,6 +37,14 @@ const SampleLibraryNavigator = () => {
       <StackSampleLibraryList.Screen
         name="SampleLibrary"
         component={SampleLibrary}
+      />
+      <StackSampleLibraryList.Screen
+        name="ManageStateMobx"
+        component={ManageStateMobxScreen}
+      />
+      <StackSampleLibraryList.Screen
+        name="ManageStateMobxLite"
+        component={ManageStateMobxLiteScreen}
       />
     </StackSampleLibraryList.Navigator>
   );

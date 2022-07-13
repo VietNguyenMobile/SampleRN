@@ -19,11 +19,23 @@ type SampleLibraryListScreenProps = NativeStackScreenProps<
 const SampleLibraryListScreen: FunctionComponent<
   SampleLibraryListScreenProps
 > = ({ navigation, route }) => {
+  const navigateToMobx = useCallback(() => {
+    navigation.navigate('ManageStateMobx');
+  });
+  const navigateToMobxLite = useCallback(() => {
+    navigation.navigate('ManageStateMobxLite');
+  });
   return (
     <ScrollView style={styles.container}>
       <View style={{ marginBottom: 100 }}>
         <Text style={{ textAlign: 'center' }}>Sample Library List</Text>
       </View>
+      <Pressable style={styles.btnNavigation} onPress={navigateToMobx}>
+        <Text style={styles.title}>Manage State with Mobx </Text>
+      </Pressable>
+      <Pressable style={styles.btnNavigation} onPress={navigateToMobxLite}>
+        <Text style={styles.title}>Manage State with Mobx Lite</Text>
+      </Pressable>
     </ScrollView>
   );
 };
