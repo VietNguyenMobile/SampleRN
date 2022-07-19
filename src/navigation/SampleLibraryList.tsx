@@ -9,6 +9,7 @@ import {
 import SampleLibrary from '../screens/SampleLibraryList';
 import ManageStateMobxScreen from 'screens/SampleLibraryList/ManageStateMobx/manage-state-mobx-screen';
 import ManageStateMobxLiteScreen from 'screens/SampleLibraryList/ManageStateMobx/manage-state-mobx-lite-screen';
+import ImagePickerScreen from 'screens/SampleLibraryList/ImagePicker/image-picker-screen';
 import {
   COLORS,
   FONTS,
@@ -20,6 +21,7 @@ export type SampleLibraryListParamType = {
   SampleLibrary: undefined;
   ManageStateMobx: undefined;
   ManageStateMobxLite: undefined;
+  ImagePickerScreen: undefined;
 };
 
 const StackSampleLibraryList =
@@ -45,6 +47,10 @@ const SampleLibraryNavigator = () => {
       <StackSampleLibraryList.Screen
         name="ManageStateMobxLite"
         component={ManageStateMobxLiteScreen}
+      />
+      <StackSampleLibraryList.Screen
+        name="ImagePickerScreen"
+        component={ImagePickerScreen}
       />
     </StackSampleLibraryList.Navigator>
   );
