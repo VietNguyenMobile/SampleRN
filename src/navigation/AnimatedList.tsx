@@ -12,12 +12,14 @@ export type AnimatedParamType = {
   TodoAnimated: undefined;
   DoubleTapToHeartAnimation: undefined;
   FoodAppUIScroll: undefined;
+  MomoHeaderAnimation: undefined;
 };
 
 import TodoAnimated from './TodoAnimated';
 import NavAnimatedList from '../screens/AnimatedList';
 import DoubleTapToHeartAnimation from '../screens/DoubleTapToHeartAnimation';
 import FoodAppUIScroll from 'screens/AnimatedList/FoodAppUIScroll';
+import MomoHeaderAnimation from 'screens/AnimatedList/MomoHeaderAnimation/momo-header-animation';
 
 const StackAnimatedList = createNativeStackNavigator<AnimatedParamType>();
 
@@ -39,6 +41,10 @@ const AnimatedListNavigator = () => {
       <StackAnimatedList.Screen
         name="FoodAppUIScroll"
         component={FoodAppUIScroll}
+      />
+      <StackAnimatedList.Screen
+        name="MomoHeaderAnimation"
+        component={MomoHeaderAnimation}
       />
     </StackAnimatedList.Navigator>
   );

@@ -27,10 +27,6 @@ const SampleLibraryListScreen: FunctionComponent<
     navigation.navigate('ManageStateMobxLite');
   });
 
-  const navigateToImagePicker = useCallback(() => {
-    navigation.navigate('ImagePickerScreen');
-  });
-
   return (
     <ScrollView style={styles.container}>
       <View style={{ marginBottom: 100 }}>
@@ -41,10 +37,6 @@ const SampleLibraryListScreen: FunctionComponent<
       </Pressable>
       <Pressable style={styles.btnNavigation} onPress={navigateToMobxLite}>
         <Text style={styles.title}>Manage State with Mobx Lite</Text>
-      </Pressable>
-
-      <Pressable style={styles.btnNavigation} onPress={navigateToImagePicker}>
-        <Text style={styles.title}>Image Picker Screen</Text>
       </Pressable>
     </ScrollView>
   );

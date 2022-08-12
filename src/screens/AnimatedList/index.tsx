@@ -36,6 +36,10 @@ const AnimatedListScreen: FunctionComponent<AnimatedListScreenProps> = ({
     navigation.navigate('FoodAppUIScroll');
   });
 
+  const navigateToMomoHeaderAnimation = useCallback(() => {
+    navigation.navigate('MomoHeaderAnimation');
+  });
+
   return (
     <ScrollView style={styles.container}>
       <View style={{ marginBottom: 100 }}>
@@ -56,6 +60,12 @@ const AnimatedListScreen: FunctionComponent<AnimatedListScreenProps> = ({
           style={styles.btnNavigation}
           onPress={navigateToFoodAppUIScroll}>
           <Text style={styles.title}>Food App UI Scroll</Text>
+        </Pressable>
+
+        <Pressable
+          style={styles.btnNavigation}
+          onPress={navigateToMomoHeaderAnimation}>
+          <Text style={styles.title}>Momo Header Animation</Text>
         </Pressable>
       </View>
     </ScrollView>
