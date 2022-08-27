@@ -106,8 +106,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     width: '100%',
     height: BOTTOM_SHEET_MAX_HEIGHT,
-    bottom: -BOTTOM_SHEET_MAX_HEIGHT + BOTTOM_SHEET_MIN_HEIGHT,
-    // bottom: BOTTOM_SHEET_MIN_HEIGHT - BOTTOM_SHEET_MAX_HEIGHT,
+    // bottom: -BOTTOM_SHEET_MAX_HEIGHT + BOTTOM_SHEET_MIN_HEIGHT,
+    bottom: BOTTOM_SHEET_MIN_HEIGHT - BOTTOM_SHEET_MAX_HEIGHT,
     // backgroundColor: 'red',
     ...Platform.select({
       android: {
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'red',
+    backgroundColor: 'white',
   },
   dragHandle: {
     width: 100,
