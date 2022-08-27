@@ -40,6 +40,10 @@ const AnimatedListScreen: FunctionComponent<AnimatedListScreenProps> = ({
     navigation.navigate('MomoHeaderAnimation');
   });
 
+  const navigateToDraggableBottomSheet = useCallback(() => {
+    navigation.navigate('DraggableBottomSheet');
+  });
+
   return (
     <ScrollView style={styles.container}>
       <View style={{ marginBottom: 100 }}>
@@ -66,6 +70,12 @@ const AnimatedListScreen: FunctionComponent<AnimatedListScreenProps> = ({
           style={styles.btnNavigation}
           onPress={navigateToMomoHeaderAnimation}>
           <Text style={styles.title}>Momo Header Animation</Text>
+        </Pressable>
+
+        <Pressable
+          style={styles.btnNavigation}
+          onPress={navigateToDraggableBottomSheet}>
+          <Text style={styles.title}>Draggable Bottom Sheet</Text>
         </Pressable>
       </View>
     </ScrollView>
