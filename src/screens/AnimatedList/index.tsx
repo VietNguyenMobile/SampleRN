@@ -44,6 +44,10 @@ const AnimatedListScreen: FunctionComponent<AnimatedListScreenProps> = ({
     navigation.navigate('DraggableBottomSheet');
   });
 
+  const navigateToFabButtonAnimated = useCallback(() => {
+    navigation.navigate('FabButtonAnimated');
+  });
+
   return (
     <ScrollView style={styles.container}>
       <View style={{ marginBottom: 100 }}>
@@ -76,6 +80,12 @@ const AnimatedListScreen: FunctionComponent<AnimatedListScreenProps> = ({
           style={styles.btnNavigation}
           onPress={navigateToDraggableBottomSheet}>
           <Text style={styles.title}>Draggable Bottom Sheet</Text>
+        </Pressable>
+
+        <Pressable
+          style={styles.btnNavigation}
+          onPress={navigateToFabButtonAnimated}>
+          <Text style={styles.title}>Fab Button Animated</Text>
         </Pressable>
       </View>
     </ScrollView>

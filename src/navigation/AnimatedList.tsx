@@ -14,6 +14,7 @@ export type AnimatedParamType = {
   FoodAppUIScroll: undefined;
   MomoHeaderAnimation: undefined;
   DraggableBottomSheet: undefined;
+  FabButtonAnimated: undefined;
 };
 
 import TodoAnimated from './TodoAnimated';
@@ -22,6 +23,7 @@ import DoubleTapToHeartAnimation from '../screens/DoubleTapToHeartAnimation';
 import FoodAppUIScroll from 'screens/AnimatedList/FoodAppUIScroll';
 import MomoHeaderAnimation from 'screens/AnimatedList/MomoHeaderAnimation/momo-header-animation';
 import DraggableBottomSheet from 'screens/AnimatedList/DraggableBottomSheet/draggable-bottom-sheet';
+import FabButtonAnimated from 'screens/AnimatedList/FabButton/FabButtonAnimated';
 
 const StackAnimatedList = createNativeStackNavigator<AnimatedParamType>();
 
@@ -51,6 +53,10 @@ const AnimatedListNavigator = () => {
       <StackAnimatedList.Screen
         name="DraggableBottomSheet"
         component={DraggableBottomSheet}
+      />
+      <StackAnimatedList.Screen
+        name="FabButtonAnimated"
+        component={FabButtonAnimated}
       />
     </StackAnimatedList.Navigator>
   );
