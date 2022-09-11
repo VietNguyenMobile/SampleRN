@@ -11,20 +11,91 @@ const UIScreenList: FunctionComponent<UIScreenListProps> = ({
   navigation,
   route,
 }) => {
-
-
   const navigateToFlatListPagination = useCallback(() => {
     navigation.navigate('FlatListPagination');
+  }, []);
+
+  const navigateToStackLayout = useCallback(() => {
+    navigation.navigate('StackLayout');
+  }, []);
+
+  const navigateToStackLayout2 = useCallback(() => {
+    navigation.navigate('StackLayout2');
+  }, []);
+
+  const navigateToHorizontalStackLayouts = useCallback(() => {
+    navigation.navigate('HorizontalStackLayouts');
+  }, []);
+
+  const navigateToJustifyContent = useCallback(() => {
+    navigation.navigate('JustifyContent');
+  }, []);
+
+  const navigateToAlignItems = useCallback(() => {
+    navigation.navigate('AlignItems');
+  }, []);
+
+  const navigateToGridLayouts = useCallback(() => {
+    navigation.navigate('GridLayout');
+  }, []);
+
+  const navigateToAbsoluteLayout = useCallback(() => {
+    navigation.navigate('AbsoluteLayout');
+  }, []);
+
+  const navigateToAbsoluteLayout2 = useCallback(() => {
+    navigation.navigate('AbsoluteLayout2');
   }, []);
 
   return (
     <ScrollView style={styles.container}>
       <View style={{ marginBottom: 100 }}>
         <Text style={{ textAlign: 'center' }}>UI Screen List</Text>
-        <Pressable
+        {/* <Pressable
           style={styles.btnNavigation}
           onPress={navigateToFlatListPagination}>
           <Text style={styles.title}>FlatList Pagination</Text>
+        </Pressable> */}
+
+        <Pressable style={styles.btnNavigation} onPress={navigateToStackLayout}>
+          <Text style={styles.title}>Stack Layout</Text>
+        </Pressable>
+        <Pressable
+          style={styles.btnNavigation}
+          onPress={navigateToStackLayout2}>
+          <Text style={styles.title}>Stack Layout 2</Text>
+        </Pressable>
+
+        <Pressable
+          style={styles.btnNavigation}
+          onPress={navigateToHorizontalStackLayouts}>
+          <Text style={styles.title}>Horizontal Stack Layouts</Text>
+        </Pressable>
+
+        <Pressable
+          style={styles.btnNavigation}
+          onPress={navigateToJustifyContent}>
+          <Text style={styles.title}>Justify Content</Text>
+        </Pressable>
+
+        <Pressable style={styles.btnNavigation} onPress={navigateToAlignItems}>
+          <Text style={styles.title}>Align Items</Text>
+        </Pressable>
+
+        <Pressable style={styles.btnNavigation} onPress={navigateToGridLayouts}>
+          <Text style={styles.title}>Grid Layout</Text>
+        </Pressable>
+
+        <Pressable
+          style={styles.btnNavigation}
+          onPress={navigateToAbsoluteLayout}>
+          <Text style={styles.title}>Absolute Layout</Text>
+        </Pressable>
+
+        <Pressable
+          style={styles.btnNavigation}
+          onPress={navigateToAbsoluteLayout2}>
+          <Text style={styles.title}>Absolute Layout 2</Text>
         </Pressable>
       </View>
     </ScrollView>
