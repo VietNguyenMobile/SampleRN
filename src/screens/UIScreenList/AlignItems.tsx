@@ -8,14 +8,18 @@ const styles = StyleSheet.create({
   container: {
     flex: 0.5,
     flexDirection: 'row',
-    justifyContent: 'flex-start', //replace with flex-end or center
+    // justifyContent: 'flex-start', //replace with flex-end or center
+    // justifyContent: 'flex-end',
+    justifyContent: 'center',
     borderBottomWidth: 1,
     borderBottomColor: '#000',
   },
   container2: {
     flex: 0.5,
     flexDirection: 'row',
-    alignItems: 'flex-start', //replace with flex-end or center
+    // alignItems: 'flex-start', //replace with flex-end or center
+    // alignItems: 'flex-end',
+    alignItems: 'center',
   },
   box: {
     width: 100,

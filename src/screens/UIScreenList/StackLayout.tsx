@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Dimensions, StyleSheet } from 'react-native';
 
-const { height } = Dimensions.get('window');
+const { height, width } = Dimensions.get('window');
 const box_count = 3;
 const box_height = height / box_count;
 
@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
   },
   box: {
     height: box_height,
+    // width: 100,
   },
   box1: {
     backgroundColor: '#2196F3',

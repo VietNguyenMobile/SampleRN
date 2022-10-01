@@ -18,11 +18,11 @@ const JustifyContent = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'flex-start',
+    // justifyContent: 'flex-start',
     // justifyContent: 'flex-end',
     // justifyContent: 'center',
     // justifyContent: 'space-around',
-    // justifyContent: 'space-between',
+    justifyContent: 'space-between',
   },
   box: {
     height: box_height,

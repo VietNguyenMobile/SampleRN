@@ -41,6 +41,11 @@ const UIScreenNavigator = () => {
         options={{ headerShown: false }}
       />
       <StackUIScreenList.Screen
+        name="StackLayout"
+        component={StackLayout}
+        options={{ headerShown: false }}
+      />
+      <StackUIScreenList.Screen
         name="StackLayout2"
         component={StackLayout2}
         options={{ headerShown: false }}

@@ -3,7 +3,6 @@ import { View, Text, Dimensions, StyleSheet } from 'react-native';
 
 const { height } = Dimensions.get('window');
 const box_count = 3;
-const box_height = height / box_count;
 
 const StackLayout2 = () => {
   return (
@@ -20,7 +19,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   box: {
-    flex: 1,
+    // flex: 1,
   },
   //header
   box1: {
@@ -29,12 +28,12 @@ const styles = StyleSheet.create({
   },
   //content
   box2: {
-    flex: 10,
+    flex: 1,
     backgroundColor: '#8BC34A',
   },
   //footer
   box3: {
-    flex: 0.5,
+    flex: 1,
     backgroundColor: '#e3aa1a',
   },
 });
