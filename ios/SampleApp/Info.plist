@@ -12,8 +12,8 @@
 <!--     <string>YOUR TEXT</string>-->
 <!--     <key>NSCalendarsUsageDescription</key>-->
 <!--     <string>YOUR TEXT</string>-->
-<!--     <key>NSCameraUsageDescription</key>-->
-<!--     <string>YOUR TEXT</string>-->
+<key>NSCameraUsageDescription</key>
+<string>$(PRODUCT_NAME) needs access to your Camera.</string>
 <!--     <key>NSContactsUsageDescription</key>-->
 <!--     <string>YOUR TEXT</string>-->
 <!--     <key>NSFaceIDUsageDescription</key>-->

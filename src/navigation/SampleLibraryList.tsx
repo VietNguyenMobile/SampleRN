@@ -9,6 +9,7 @@ import {
 import SampleLibrary from '../screens/SampleLibraryList';
 import ManageStateMobxScreen from 'screens/SampleLibraryList/ManageStateMobx/manage-state-mobx-screen';
 import ManageStateMobxLiteScreen from 'screens/SampleLibraryList/ManageStateMobx/manage-state-mobx-lite-screen';
+import VisionCamera from 'screens/SampleLibraryList/VisionCamera/VisionCamera';
 import {
   COLORS,
   FONTS,
@@ -20,6 +21,7 @@ export type SampleLibraryListParamType = {
   SampleLibrary: undefined;
   ManageStateMobx: undefined;
   ManageStateMobxLite: undefined;
+  VisionCamera: undefined;
 };
 
 const StackSampleLibraryList =
@@ -28,6 +30,7 @@ const StackSampleLibraryList =
 const SampleLibraryNavigator = () => {
   // const navigation =
   //   useNavigation<NativeStackNavigationProp<SampleAppParamType>>();
+
 
   return (
     <StackSampleLibraryList.Navigator
@@ -45,6 +48,10 @@ const SampleLibraryNavigator = () => {
       <StackSampleLibraryList.Screen
         name="ManageStateMobxLite"
         component={ManageStateMobxLiteScreen}
+      />
+      <StackSampleLibraryList.Screen
+        name="VisionCamera"
+        component={VisionCamera}
       />
     </StackSampleLibraryList.Navigator>
   );

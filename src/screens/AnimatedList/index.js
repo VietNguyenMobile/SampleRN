@@ -17,7 +17,7 @@ import { AnimatedParamType } from '../../navigation/AnimatedList';
 
 type AnimatedListScreenProps = NativeStackScreenProps<
   AnimatedParamType,
-  'AnimatedList'
+  'AnimatedList',
 >;
 
 const AnimatedListScreen: FunctionComponent<AnimatedListScreenProps> = ({
@@ -47,6 +47,8 @@ const AnimatedListScreen: FunctionComponent<AnimatedListScreenProps> = ({
   const navigateToFabButtonAnimated = useCallback(() => {
     navigation.navigate('FabButtonAnimated');
   });
+
+  const navigateToCustomTabBar = () => navigation.navigate('CustomTabBar');
 
   return (
     <ScrollView style={styles.container}>
@@ -86,6 +88,11 @@ const AnimatedListScreen: FunctionComponent<AnimatedListScreenProps> = ({
           style={styles.btnNavigation}
           onPress={navigateToFabButtonAnimated}>
           <Text style={styles.title}>Fab Button Animated</Text>
+        </Pressable>
+        <Pressable
+          style={styles.btnNavigation}
+          onPress={navigateToCustomTabBar}>
+          <Text style={styles.title}>Custom Tab Bar</Text>
         </Pressable>
       </View>
     </ScrollView>

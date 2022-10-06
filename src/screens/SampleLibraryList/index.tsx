@@ -27,6 +27,10 @@ const SampleLibraryListScreen: FunctionComponent<
     navigation.navigate('ManageStateMobxLite');
   });
 
+  const navigateToVisionCamera = useCallback(() => {
+    navigation.navigate('VisionCamera');
+  });
+
   return (
     <ScrollView style={styles.container}>
       <View style={{ marginBottom: 100 }}>
@@ -37,6 +41,9 @@ const SampleLibraryListScreen: FunctionComponent<
       </Pressable>
       <Pressable style={styles.btnNavigation} onPress={navigateToMobxLite}>
         <Text style={styles.title}>Manage State with Mobx Lite</Text>
+      </Pressable>
+      <Pressable style={styles.btnNavigation} onPress={navigateToVisionCamera}>
+        <Text style={styles.title}>Vision Camera</Text>
       </Pressable>
     </ScrollView>
   );
