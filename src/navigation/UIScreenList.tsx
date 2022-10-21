@@ -2,15 +2,27 @@ import React from 'react';
 import { TouchableOpacity, Image } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import UIScreen from '../screens/UIScreenList';
-import FlatListPagination from 'screens/UIScreenList/FlatListPagination';
-import StackLayout from 'screens/UIScreenList/StackLayout';
-import StackLayout2 from 'screens/UIScreenList/StackLayout2';
-import HorizontalStackLayouts from 'screens/UIScreenList/HorizontalStackLayouts';
-import JustifyContent from 'screens/UIScreenList/JustifyContent';
-import AlignItems from 'screens/UIScreenList/AlignItems';
-import GridLayout from 'screens/UIScreenList/GridLayout';
-import AbsoluteLayout from 'screens/UIScreenList/AbsoluteLayout';
-import AbsoluteLayout2 from 'screens/UIScreenList/AbsoluteLayout2';
+// import FlatListPagination from 'screens/UIScreenList/FlatListPagination';
+// import StackLayout from 'screens/UIScreenList/StackLayout';
+// import StackLayout2 from 'screens/UIScreenList/StackLayout2';
+// import HorizontalStackLayouts from 'screens/UIScreenList/HorizontalStackLayouts';
+// import JustifyContent from 'screens/UIScreenList/JustifyContent';
+// import AlignItems from 'screens/UIScreenList/AlignItems';
+// import GridLayout from 'screens/UIScreenList/GridLayout';
+// import AbsoluteLayout from 'screens/UIScreenList/AbsoluteLayout';
+// import AbsoluteLayout2 from 'screens/UIScreenList/AbsoluteLayout2';
+import {
+  CustomModal,
+  FlatListPagination,
+  StackLayout,
+  StackLayout2,
+  HorizontalStackLayouts,
+  JustifyContent,
+  AbsoluteLayout,
+  AbsoluteLayout2,
+  AlignItems,
+  GridLayout,
+} from 'screens';
 
 export type UIScreenParamType = {
   UIScreen: undefined;
@@ -24,6 +36,7 @@ export type UIScreenParamType = {
   GridLayout: undefined;
   AbsoluteLayout: undefined;
   AbsoluteLayout2: undefined;
+  CustomModal: undefined;
 };
 
 const StackUIScreenList = createNativeStackNavigator<UIScreenParamType>();
@@ -83,6 +96,11 @@ const UIScreenNavigator = () => {
       <StackUIScreenList.Screen
         name="AbsoluteLayout2"
         component={AbsoluteLayout2}
+        options={{ headerShown: false }}
+      />
+      <StackUIScreenList.Screen
+        name="CustomModal"
+        component={CustomModal}
         options={{ headerShown: false }}
       />
     </StackUIScreenList.Navigator>

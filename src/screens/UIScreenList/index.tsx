@@ -47,17 +47,25 @@ const UIScreenList: FunctionComponent<UIScreenListProps> = ({
     navigation.navigate('AbsoluteLayout2');
   }, []);
 
+  const navigateToCustomModal = () => {
+    navigation.navigate('CustomModal');
+  };
+
   return (
     <ScrollView style={styles.container}>
       <View style={{ marginBottom: 100 }}>
         <Text style={{ textAlign: 'center' }}>UI Screen List</Text>
-        {/* <Pressable
+        <Pressable
           style={styles.btnNavigation}
           onPress={navigateToFlatListPagination}>
           <Text style={styles.title}>FlatList Pagination</Text>
-        </Pressable> */}
+        </Pressable>
 
-        <Pressable style={styles.btnNavigation} onPress={navigateToStackLayout}>
+        <Pressable style={styles.btnNavigation} onPress={navigateToCustomModal}>
+          <Text style={styles.title}>Custom Modal</Text>
+        </Pressable>
+
+        {/* <Pressable style={styles.btnNavigation} onPress={navigateToStackLayout}>
           <Text style={styles.title}>Stack Layout</Text>
         </Pressable>
         <Pressable
@@ -96,7 +104,7 @@ const UIScreenList: FunctionComponent<UIScreenListProps> = ({
           style={styles.btnNavigation}
           onPress={navigateToAbsoluteLayout2}>
           <Text style={styles.title}>Absolute Layout 2</Text>
-        </Pressable>
+        </Pressable> */}
       </View>
     </ScrollView>
   );
